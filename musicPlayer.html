@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MusicPlayer</title>
+    <link rel="stylesheet" href="./assets/main.css">
+    <link rel="shortcut icon" href="./assets/img/head-img.jpg">
+    <script src="https://kit.fontawesome.com/502650a7cc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="player">
+            <div class="dashboard">
+                <header>
+                    <h5 style="color: rgb(236, 52, 52);">Now playing:</h5>
+                    <p style="font-size: 22px;">Music name</p>
+                </header>
+                <div class="cd">
+                    <div class="music-cd" 
+                        style="background-image: url('./assets/img/img1.jpg');">      
+                    </div>   
+                </div>
+    
+                <div class="control">
+                    <div class="btn btn-repeat">
+                        <i class="fa-solid fa-repeat"></i>
+                    </div>
+                    <div class="btn btn-pre">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </div>
+                    <div class="btn btn-play">
+                        <i class="icon-play fa-solid fa-play"></i>
+                        <i class="icon-pause fa-solid fa-pause"></i>
+                    </div>
+                    <div class="btn btn-next">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </div>
+                    <div class="btn btn-random">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </div>
+                </div>
+                
+                <input id="process" class="process" type="range" min="0" max="100" value="0" step="1">
+    
+                <audio id="audio" src=""></audio>
+                
+            </div>
+    
+            <div class="play-list">     
+            </div>
+        </div>
+    </div>
+    <script src="./assets/main.js"></script>
+</body>
+</html>
