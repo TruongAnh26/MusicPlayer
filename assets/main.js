@@ -244,7 +244,7 @@ const app = {
         
     },
     loadCurrentSong: function() {
-        const heading = $('header p')
+        const heading = $('.music-name p')
         const musicCd = $('.music-cd')
         const audio = $('#audio')
         heading.textContent = this.currentSong.name
@@ -295,10 +295,35 @@ app.start()
 
 
 const songList = $$('.song')
-
 const songActive = $('.song.active')
 
+// xử lý onlcik vào bài hát
+songList.forEach(song => {
+    song.onclick = () => {
+        song.style.animation = "pressSong 0.2s ease-in"
+        setTimeout(() => {
+            song.style.animation = ""
+        },200)
+    } 
+})
 
+
+
+//change mode
+const lightMode = $('.light-mode')
+const darkMode = $('.dark-mode')
+const container = $('.container')
+lightMode.onclick = () => {
+    lightMode.classList.add('using')
+    darkMode.classList.add('using')
+    container.style.backgroundImage = "linear-gradient(180deg, rgb(0 0 0), rgb(12 12 12 / 97%))"
+}
+
+darkMode.onclick = () => {
+    lightMode.classList.remove('using')
+    darkMode.classList.remove('using')
+    container.style.backgroundImage = "linear-gradient(180deg, rgb(30 3 54), rgb(40 5 100 / 97%))"
+}
 
 
 

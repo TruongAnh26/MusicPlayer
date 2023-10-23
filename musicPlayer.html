@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,21 +9,35 @@
     <link rel="shortcut icon" href="./assets/img/head-img.jpg">
     <script src="https://kit.fontawesome.com/502650a7cc.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <div class="container">
 
         <div class="player">
             <div class="dashboard">
+
+                <i class="mode-control light-mode fa-solid fa-sun"></i>
+                <i class="mode-control dark-mode fa-solid fa-moon"></i>
+
+
                 <header>
-                    <h5 style="color: rgb(236, 52, 52);">Now playing:</h5>
-                    <p style="font-size: 22px;">Music name</p>
+                    <h5 style="color: #f291a3;
+                                font-size: 18px;
+                                padding: 10px 0;">
+                        Now playing:
+                    </h5>
                 </header>
                 <div class="cd">
-                    <div class="music-cd" 
-                        style="background-image: url('./assets/img/img1.jpg');">      
-                    </div>   
+                    <div class="music-cd" style="background-image: url('./assets/img/img1.jpg');">
+                    </div>
                 </div>
-    
+                <div class="music-name">
+                    <p style="font-size: 28px;
+                            color: #0b0340;
+                            font-weight: 600;">Music name
+                    </p>
+                </div>
+
                 <div class="control">
                     <div class="btn btn-repeat">
                         <i class="fa-solid fa-repeat"></i>
@@ -41,17 +56,18 @@
                         <i class="fa-solid fa-shuffle"></i>
                     </div>
                 </div>
-                
+
                 <input id="process" class="process" type="range" min="0" max="100" value="0" step="1">
-    
+
                 <audio id="audio" src=""></audio>
-                
+
             </div>
-    
-            <div class="play-list">     
+
+            <div class="play-list">
             </div>
         </div>
     </div>
     <script src="./assets/main.js"></script>
 </body>
+
 </html>
